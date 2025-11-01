@@ -22,13 +22,9 @@ namespace OkalaChallenge.Controllers
                 var weatherDetails = await _weatherApiClientService.GetWeatherDetails(cityName);
                 if (weatherDetails == null)
                     return BadRequest("Couldn't fetch weather details of city!");
-                var latitude = 0.0;
-                var longitude = 0.0;
-                if (weatherDetails.Coord != null) {
-                     latitude = weatherDetails.Coord.Lat;
-                     longitude = weatherDetails.Coord.Lon;
-                }
-              
+                var latitude = weatherDetails.Coord.Lat;
+                var longitude = weatherDetails.Coord.Lon;
+
                 var weatherPollutantsDetails = await _weatherApiClientService.GetWeatherPollutantsDetails(latitude.ToString(), longitude.ToString());
                 if (weatherPollutantsDetails == null)
                     return BadRequest("Couldn't fetch weather pollutants details of city!");

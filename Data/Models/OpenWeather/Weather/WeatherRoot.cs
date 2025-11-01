@@ -12,16 +12,16 @@ namespace OkalaChallenge.Data.Models.OpenWeather.Weather
         private string _name = "";
         private int _cod = 0;
 
-        public Coord? Coord { get; set; }
+        public required Coord Coord { get; set; }
         public List<Weather>? Weather { get; set; }
         [JsonPropertyName("base")]
         public string Base { get => _base; set => _base = value; }
         [JsonPropertyName("main")]
-        public WeatherMain? Main { get; set; }
+        public required WeatherMain Main { get; set; }
         [JsonPropertyName("visibility")]
         public int Visibility { get => _visibility; set => _visibility = value; }
         [JsonPropertyName("wind")]
-        public Wind? Wind { get; set; }
+        public required Wind Wind { get; set; }
         [JsonPropertyName("clouds")]
         public Clouds? Clouds { get; set; }
         [JsonPropertyName("dt")]

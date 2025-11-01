@@ -7,9 +7,9 @@ namespace OkalaChallenge.Data.Models.OpenWeather.Pollutants
         private int _dt = 0;
 
         [JsonPropertyName("main")]
-        public PollutantsMain? Main { get; set; }
+        public required PollutantsMain Main { get; set; }
         [JsonPropertyName("components")]
-        public Components? Components { get; set; }
+        public required Components Components { get; set; }
         [JsonPropertyName("dt")]
         public int Dt
         {
