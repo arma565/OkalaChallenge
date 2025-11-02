@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OkalaChallenge", "OkalaChallenge.csproj", "{B6243DB8-BD9D-4430-9AE5-352F2D12A6D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OkalaChallengeTests", "..\OkalaChallengeTests\OkalaChallengeTests.csproj", "{B4C3795D-D71C-45C0-8CD2-3EE7AAEC0DA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B6243DB8-BD9D-4430-9AE5-352F2D12A6D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6243DB8-BD9D-4430-9AE5-352F2D12A6D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6243DB8-BD9D-4430-9AE5-352F2D12A6D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4C3795D-D71C-45C0-8CD2-3EE7AAEC0DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C3795D-D71C-45C0-8CD2-3EE7AAEC0DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C3795D-D71C-45C0-8CD2-3EE7AAEC0DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4C3795D-D71C-45C0-8CD2-3EE7AAEC0DA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
