@@ -7,10 +7,11 @@ namespace OkalaChallenge.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class WeatherController(WeatherApiClientService weatherApiClientService) : ControllerBase
+    public class WeatherController(WeatherApiClientService weatherApiClientService , TechnicalQuestionsService interviewResponseService) : ControllerBase
     {
         private readonly WeatherApiClientService _weatherApiClientService = weatherApiClientService;
-        [HttpGet("get/{cityName}")]
+        private readonly TechnicalQuestionsService _interviewResponseService = interviewResponseService;
+        [HttpGet("get/city/{cityName}")]
         public async Task<IActionResult> GetWeatherDetails(string cityName)
         {
             try
@@ -49,18 +50,7 @@ namespace OkalaChallenge.Controllers
                         Nh3 = first.Components.Nh3
                     },
                     Latitude = latitude,
-                    Longitude = longitude,
-                    TechnicalQuestions = 
-                    "1.How much time did you spend on this task? 1 day and half,\n " +
-                    "If you had more time, what improvements or additions would you make? i'm not sure, maybe more details about the city, for example Area, Population, \n" +
-                    "2.What is the most useful feature recently added to your favorite programming language? upload and download image to the api \n" +
-                    "Please include a code snippet to demonstrate how you use it => i can share it via github or source code of project through whats app \n" +
-                    "3.How do you identify and diagnose a performance issue in a production environment? i did not use them but i know i must use profiler tools \n" +
-                    "4.What’s the last technical book you read or technical conference you attended? Data structure,Algorithm design and Software Engineering \n" +
-                    "What did you learn from it? Data structure: lists,Queue,Arrays,Graph,Tree,Stack,Linked list etc. Algorithm design: design methods like Divide and Conquer or Greedy Method etc. \n" +
-                    "What’s your opinion about this technical test? i've learned some technical things like tests and OpenWeatherMap website apis because i had no exprience in them before, its great to see if i dont know something try to learn it."
-                    
-
+                    Longitude = longitude
                 };
                 return Ok(city);
             }
@@ -71,6 +61,12 @@ namespace OkalaChallenge.Controllers
             {
                 return StatusCode(500, "Uknown system error!");
             }
+        }
+
+        [HttpGet("get/technical")]
+        public IActionResult GetTechnicalQuestionsResult() {
+            var result = _interviewResponseService.GetTechnicalQuestionsResult();
+            return Ok(result);
         }
     }
 }

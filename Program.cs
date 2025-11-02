@@ -7,6 +7,8 @@ builder.Services.AddHttpClient<WeatherApiClientService>((sp,client) => {
     client.BaseAddress = new Uri(config["OpenWeather:BaseUrl"] ?? throw new InvalidOperationException("OpenWeather:BaseUrl missing"));
 });
 
+builder.Services.AddScoped<TechnicalQuestionsService>();
+
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
