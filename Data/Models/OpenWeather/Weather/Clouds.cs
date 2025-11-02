@@ -7,6 +7,10 @@ namespace OkalaChallenge.Data.Models.OpenWeather.Weather
         private int _all;
 
         [JsonPropertyName("all")]
-        public int All { get => _all; set => _all = value; }
+        public int All
+        {
+            get => _all;
+            set => _all = value;
+        }
     }
 }

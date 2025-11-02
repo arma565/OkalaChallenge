@@ -11,7 +11,7 @@ namespace OkalaChallenge.Data.Models
         private int _aqi = 0;
         private double _latitude;
         private double _longitude;
-        private PollutantsRoot? _pollutants;
+        private PollutantsRoot _pollutants = new();
 
         public int Temperature
         {
@@ -43,7 +43,7 @@ namespace OkalaChallenge.Data.Models
             get => _longitude;
             set => _longitude = value;
         }
-        public PollutantsRoot? Pollutants
+        public PollutantsRoot Pollutants
         {
             get => _pollutants;
             set => _pollutants = value;

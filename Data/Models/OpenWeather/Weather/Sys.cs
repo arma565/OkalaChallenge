@@ -11,14 +11,34 @@ namespace OkalaChallenge.Data.Models.OpenWeather.Weather
         private int _sunset = 0;
 
         [JsonPropertyName("type")]
-        public int Type { get => _type; set => _type = value; }
+        public int Type
+        {
+            get => _type;
+            set => _type = value;
+        }
         [JsonPropertyName("id")]
-        public int Id { get => _id; set => _id = value; }
+        public int Id
+        {
+            get => _id;
+            set => _id = value;
+        }
         [JsonPropertyName("country")]
-        public string Country { get => _country; set => _country = value; }
+        public string Country
+        {
+            get => _country;
+            set => _country = value;
+        }
         [JsonPropertyName("sunrise")]
-        public int Sunrise { get => _sunrise; set => _sunrise = value; }
+        public int Sunrise
+        {
+            get => _sunrise;
+            set => _sunrise = value;
+        }
         [JsonPropertyName("sunset")]
-        public int Sunset { get => _sunset; set => _sunset = value; }
+        public int Sunset
+        {
+            get => _sunset;
+            set => _sunset = value;
+        }
     }
 }
